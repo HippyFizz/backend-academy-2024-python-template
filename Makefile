@@ -14,7 +14,7 @@ install: ## Install dependencies
 .PHONY: lint
 lint: ## Run linters in format mode
 	$(POETRY_RUN) ruff format ./src ./tests
-	$(POETRY_RUN) ruff check ./src ./tests
+	$(POETRY_RUN) ruff check --fix ./src ./tests
 	$(POETRY_RUN) pytest --dead-fixtures --dup-fixtures
 
 .PHONY: test
