@@ -9,10 +9,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 
-
 [tool.poetry.dev-dependencies]
-black = "^24.8.0"
-isort = "^5.13.2"
 ruff = "^0.6.1"
 pytest = "*"
 pytest-cov = "*"
@@ -24,3 +21,13 @@ pytest-asyncio = "*"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "F",  # ruff default configuration
+    "E", 
+    "I"  # isort module
+]
